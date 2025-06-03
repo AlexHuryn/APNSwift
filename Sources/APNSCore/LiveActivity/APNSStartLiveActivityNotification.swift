@@ -38,7 +38,7 @@ public struct APNSStartLiveActivityNotification<Attributes: Encodable & Sendable
         }
     }
 
-    public var alert: APNSStartLiveActivityAlert {
+    public var alert: APNSStartLiveActivityAlert? {
         get {
             return self.aps.alert
         }
@@ -116,7 +116,7 @@ public struct APNSStartLiveActivityNotification<Attributes: Encodable & Sendable
         apnsID: UUID? = nil,
         attributes: Attributes,
         attributesType: String,
-        alert: APNSStartLiveActivityAlert
+        alert: APNSStartLiveActivityAlert? = nil
     ) {
       self.aps = APNSStartLiveActivityNotificationAPSStorage(
           timestamp: timestamp,

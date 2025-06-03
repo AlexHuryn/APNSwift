@@ -29,7 +29,7 @@ struct APNSStartLiveActivityNotificationAPSStorage<Attributes: Encodable & Senda
     var event: String = "start"
     var contentState: ContentState
     var dismissalDate: Int?
-    var alert: APNSStartLiveActivityAlert
+    var alert: APNSStartLiveActivityAlert?
     var attributes: Attributes
     var attributesType: String
 
@@ -37,7 +37,7 @@ struct APNSStartLiveActivityNotificationAPSStorage<Attributes: Encodable & Senda
         timestamp: Int,
         contentState: ContentState,
         dismissalDate: Int?,
-        alert: APNSStartLiveActivityAlert,
+        alert: APNSStartLiveActivityAlert?,
         attributes: Attributes,
         attributesType: String
     ) {
